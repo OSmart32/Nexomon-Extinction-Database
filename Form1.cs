@@ -11,21 +11,25 @@ namespace Nexomon_Extinction_Database
 {
     public partial class Form1 : Form
     {
-        private Dictionary<string, Nexomon> nexomonList = new Dictionary<string, Nexomon>();
-        private List<string> skillNames, skillDescriptions;
-        private Dictionary<int, Skill> skillList = new Dictionary<int, Skill>();
-        private string currentDir = Environment.CurrentDirectory;
+        private Dictionary<string, Nexomon> nexomonList;
+        private Dictionary<int, Skill> skillList;
+        private List<string> skillNames = new List<string>();
+        private List<string> skillDescriptions = new List<string>();
         private Nexomon currentMon;
+        private string currentDir = Environment.CurrentDirectory;
 
 
 
         // FORM LOAD
         private void Form1_Load(object sender, EventArgs e)
         {
-            // parse monsters data
+            // parse monsters and skills data
             //
             nexomonList = JsonConvert.DeserializeObject<Dictionary<string, Nexomon>>
                 (File.ReadAllText($@"{currentDir}\Data\monsters.txt"));
+            skillList = JsonConvert.DeserializeObject<Dictionary<int, Skill>>
+                (File.ReadAllText($@"{currentDir}\Data\skills.txt"));
+
 
             /* Add the nexomon names to the list
              * Evolutions do not have a skill tree, so check previous index for skill tree
@@ -40,27 +44,21 @@ namespace Nexomon_Extinction_Database
                     nexomonList[mon].skill_tree = nexomonList[nexomonList.Keys.ToList()[monIndex - 1]].skill_tree;
                 }
             }
-            
-
-            // parse skills data
-            //
-            skillList = JsonConvert.DeserializeObject<Dictionary<int, Skill>>
-                (File.ReadAllText($@"{currentDir}\Data\skills.txt"));
 
 
-            skillNames = new List<string>();
-            skillDescriptions = new List<string>();
-
-
-            // parse skills names and descriptions
+            // get skills names and descriptions
             //
             foreach (var value in skillList.Values)
             {
                 skillNames.Add(value.name);
                 skillDescriptions.Add(value.description);
             }
-        }
 
+            // add skills to skills search list
+            //
+            foreach (string s in skillNames)
+                listBox2.Items.Add(s);
+        }
 
 
         // Initialize
@@ -70,11 +68,11 @@ namespace Nexomon_Extinction_Database
         }
 
 
-
         // FORM FIRST SHOWN
         private void Form1_Shown(object sender, EventArgs e)
         {
             listBox1.SelectedIndex = 0;
+            listBox2.SelectedIndex = 0;
         }
 
 
@@ -82,14 +80,20 @@ namespace Nexomon_Extinction_Database
         // NEXOMON LIST SELECTED ITEM CHANGE
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // get current mon
+            //
             string monName = ConvertToLower(listBox1.SelectedItem.ToString());
             currentMon = nexomonList[monName];
 
+            // set monster and element images
+            //
             Bitmap bmpMon = (Bitmap)Properties.Resources.ResourceManager.GetObject(monName);
             pictureBox1.Image = bmpMon;
             Bitmap bmpType = (Bitmap)Properties.Resources.ResourceManager.GetObject(currentMon.element);
             pictureBox2.Image = bmpType;
 
+            // set monster info texts
+            //
             hpText.Text = $"HP:   {currentMon.hp}";
             staminaText.Text = $"STA: {currentMon.sta}";
             attackText.Text = $"ATK: {currentMon.atk}";
@@ -97,6 +101,8 @@ namespace Nexomon_Extinction_Database
             speedText.Text = $"SPD: {currentMon.spd}";
             descText.Text = currentMon.description;
 
+            // clear old monster's skills and add the new monster's skills
+            //
             listView1.Items.Clear();
             for (int i = 0; i < currentMon.skill_tree.Count; i++)
             {
@@ -114,6 +120,52 @@ namespace Nexomon_Extinction_Database
                     $"Crit: {skill.critical}%   " +
                     $"Lv{keys[i]}";
             }
+        }
+
+
+        // SKILLS SEARCH LIST SELECTED ITEM CHANGE
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // get skill and skill index
+            //
+            var skill = skillList.Where(x => x.Value.name == listBox2.SelectedItem.ToString());
+            var skillNum = skill.First().Key;
+
+            // clear skillmons list and add new ones
+            //
+            listBox3.Items.Clear();
+            foreach (var mon in nexomonList.Where(x => x.Value.skill_tree.Values.Contains(skillNum)))
+            {
+                var item = listBox3.Items.Add($"{ConvertToUpper(mon.Key)},  " +
+                    $"Lv{mon.Value.skill_tree.Where(x => x.Value == skillNum).First().Key}");
+            }
+
+            // set first mon to be selected
+            //
+            listBox3.SelectedIndex = 0;
+        }
+
+
+        // SKILLS SEARCH NEXOMON CHANGED
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // set current mon and image
+            //
+            string[] itemName = listBox3.SelectedItem.ToString().Split(',');
+            string monName = ConvertToLower(itemName[0]);
+            currentMon = nexomonList[monName];
+            Bitmap bmpMon = (Bitmap)Properties.Resources.ResourceManager.GetObject(monName);
+            pictureBox4.Image = bmpMon;
+        }
+
+
+        // SKILLS SEARCH NEXOMON VIEW CHAGE
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // change tab and selected nexomon
+            //
+            tabControl1.SelectedIndex = 0;
+            listBox1.SelectedItem = ConvertToUpper(nexomonList.Where(x => x.Value == currentMon).First().Key);
         }
 
 
@@ -184,7 +236,9 @@ namespace Nexomon_Extinction_Database
 
             return sb.ToString();
         }
+
     }
+
 
 
 
