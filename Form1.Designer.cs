@@ -45,9 +45,15 @@ namespace Nexomon_Extinction_Database
             this.descText = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.food2Image = new System.Windows.Forms.PictureBox();
+            this.food3Image = new System.Windows.Forms.PictureBox();
+            this.food1Image = new System.Windows.Forms.PictureBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.monsterImage1 = new System.Windows.Forms.PictureBox();
+            this.elementImage = new System.Windows.Forms.PictureBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.listBox3 = new System.Windows.Forms.ListBox();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label45 = new System.Windows.Forms.Label();
@@ -96,21 +102,26 @@ namespace Nexomon_Extinction_Database
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label47 = new System.Windows.Forms.Label();
-            this.label48 = new System.Windows.Forms.Label();
             this.label49 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.food2Image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.food3Image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.food1Image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monsterImage1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementImage)).BeginInit();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -140,57 +151,57 @@ namespace Nexomon_Extinction_Database
             // 
             // hpText
             // 
-            this.hpText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hpText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.hpText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.hpText.Location = new System.Drawing.Point(486, 279);
+            this.hpText.Location = new System.Drawing.Point(506, 238);
             this.hpText.Name = "hpText";
-            this.hpText.Size = new System.Drawing.Size(82, 23);
+            this.hpText.Size = new System.Drawing.Size(30, 20);
             this.hpText.TabIndex = 3;
-            this.hpText.Text = "HP:   0";
+            this.hpText.Text = "0";
             this.hpText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // staminaText
             // 
-            this.staminaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.staminaText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.staminaText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.staminaText.Location = new System.Drawing.Point(486, 302);
+            this.staminaText.Location = new System.Drawing.Point(506, 258);
             this.staminaText.Name = "staminaText";
-            this.staminaText.Size = new System.Drawing.Size(82, 23);
+            this.staminaText.Size = new System.Drawing.Size(30, 20);
             this.staminaText.TabIndex = 4;
-            this.staminaText.Text = "STA: 0";
+            this.staminaText.Text = "0";
             this.staminaText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // attackText
             // 
-            this.attackText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attackText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.attackText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.attackText.Location = new System.Drawing.Point(486, 325);
+            this.attackText.Location = new System.Drawing.Point(506, 278);
             this.attackText.Name = "attackText";
-            this.attackText.Size = new System.Drawing.Size(82, 23);
+            this.attackText.Size = new System.Drawing.Size(30, 20);
             this.attackText.TabIndex = 5;
-            this.attackText.Text = "ATK: 0";
+            this.attackText.Text = "0";
             this.attackText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // defenseText
             // 
-            this.defenseText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.defenseText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.defenseText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.defenseText.Location = new System.Drawing.Point(486, 348);
+            this.defenseText.Location = new System.Drawing.Point(506, 298);
             this.defenseText.Name = "defenseText";
-            this.defenseText.Size = new System.Drawing.Size(82, 23);
+            this.defenseText.Size = new System.Drawing.Size(30, 20);
             this.defenseText.TabIndex = 6;
-            this.defenseText.Text = "DEF: 0";
+            this.defenseText.Text = "0";
             this.defenseText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // speedText
             // 
-            this.speedText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.speedText.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.speedText.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.speedText.Location = new System.Drawing.Point(486, 371);
+            this.speedText.Location = new System.Drawing.Point(506, 318);
             this.speedText.Name = "speedText";
-            this.speedText.Size = new System.Drawing.Size(82, 23);
+            this.speedText.Size = new System.Drawing.Size(30, 20);
             this.speedText.TabIndex = 7;
-            this.speedText.Text = "SPD: 0";
+            this.speedText.Text = "0";
             this.speedText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
@@ -463,16 +474,24 @@ namespace Nexomon_Extinction_Database
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.tabPage1.Controls.Add(this.label54);
+            this.tabPage1.Controls.Add(this.label53);
+            this.tabPage1.Controls.Add(this.label52);
+            this.tabPage1.Controls.Add(this.label51);
+            this.tabPage1.Controls.Add(this.label50);
+            this.tabPage1.Controls.Add(this.food2Image);
+            this.tabPage1.Controls.Add(this.food3Image);
+            this.tabPage1.Controls.Add(this.food1Image);
             this.tabPage1.Controls.Add(this.label47);
             this.tabPage1.Controls.Add(this.listBox1);
             this.tabPage1.Controls.Add(this.descText);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.pictureBox1);
+            this.tabPage1.Controls.Add(this.monsterImage1);
             this.tabPage1.Controls.Add(this.listView1);
             this.tabPage1.Controls.Add(this.hpText);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.staminaText);
-            this.tabPage1.Controls.Add(this.pictureBox2);
+            this.tabPage1.Controls.Add(this.elementImage);
             this.tabPage1.Controls.Add(this.attackText);
             this.tabPage1.Controls.Add(this.speedText);
             this.tabPage1.Controls.Add(this.defenseText);
@@ -483,24 +502,68 @@ namespace Nexomon_Extinction_Database
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Nexomon";
             // 
-            // pictureBox1
+            // food2Image
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Nexomon_Extinction_Database.Properties.Resources.acegon;
-            this.pictureBox1.Location = new System.Drawing.Point(318, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.food2Image.BackColor = System.Drawing.Color.Transparent;
+            this.food2Image.Location = new System.Drawing.Point(398, 344);
+            this.food2Image.Name = "food2Image";
+            this.food2Image.Size = new System.Drawing.Size(50, 50);
+            this.food2Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.food2Image.TabIndex = 19;
+            this.food2Image.TabStop = false;
             // 
-            // pictureBox2
+            // food3Image
             // 
-            this.pictureBox2.Image = global::Nexomon_Extinction_Database.Properties.Resources.fire;
-            this.pictureBox2.Location = new System.Drawing.Point(318, 269);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(125, 125);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.food3Image.BackColor = System.Drawing.Color.Transparent;
+            this.food3Image.Location = new System.Drawing.Point(486, 344);
+            this.food3Image.Name = "food3Image";
+            this.food3Image.Size = new System.Drawing.Size(50, 50);
+            this.food3Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.food3Image.TabIndex = 18;
+            this.food3Image.TabStop = false;
+            // 
+            // food1Image
+            // 
+            this.food1Image.BackColor = System.Drawing.Color.Transparent;
+            this.food1Image.Location = new System.Drawing.Point(311, 344);
+            this.food1Image.Name = "food1Image";
+            this.food1Image.Size = new System.Drawing.Size(50, 50);
+            this.food1Image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.food1Image.TabIndex = 17;
+            this.food1Image.TabStop = false;
+            // 
+            // label47
+            // 
+            this.label47.BackColor = System.Drawing.Color.Transparent;
+            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label47.Location = new System.Drawing.Point(5, 397);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(562, 32);
+            this.label47.TabIndex = 16;
+            this.label47.Text = "Description";
+            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // monsterImage1
+            // 
+            this.monsterImage1.BackColor = System.Drawing.Color.Transparent;
+            this.monsterImage1.Image = global::Nexomon_Extinction_Database.Properties.Resources.acegon;
+            this.monsterImage1.Location = new System.Drawing.Point(311, 3);
+            this.monsterImage1.Name = "monsterImage1";
+            this.monsterImage1.Size = new System.Drawing.Size(225, 225);
+            this.monsterImage1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.monsterImage1.TabIndex = 2;
+            this.monsterImage1.TabStop = false;
+            // 
+            // elementImage
+            // 
+            this.elementImage.BackColor = System.Drawing.Color.Transparent;
+            this.elementImage.Image = global::Nexomon_Extinction_Database.Properties.Resources.fire;
+            this.elementImage.Location = new System.Drawing.Point(311, 238);
+            this.elementImage.Name = "elementImage";
+            this.elementImage.Size = new System.Drawing.Size(100, 100);
+            this.elementImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.elementImage.TabIndex = 9;
+            this.elementImage.TabStop = false;
             // 
             // tabPage4
             // 
@@ -516,6 +579,27 @@ namespace Nexomon_Extinction_Database
             this.tabPage4.Size = new System.Drawing.Size(573, 488);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Skills Search";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(298, 324);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 45);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Go to Nexomon view";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Location = new System.Drawing.Point(298, 68);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox4.TabIndex = 18;
+            this.pictureBox4.TabStop = false;
             // 
             // listBox3
             // 
@@ -1091,47 +1175,16 @@ namespace Nexomon_Extinction_Database
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Elemental Chart";
             // 
-            // pictureBox3
+            // label49
             // 
-            this.pictureBox3.Image = global::Nexomon_Extinction_Database.Properties.Resources.typechart;
-            this.pictureBox3.Location = new System.Drawing.Point(8, 50);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(556, 388);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Location = new System.Drawing.Point(298, 68);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(250, 250);
-            this.pictureBox4.TabIndex = 18;
-            this.pictureBox4.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(298, 324);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 45);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Go to Nexomon view";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label47
-            // 
-            this.label47.BackColor = System.Drawing.Color.Transparent;
-            this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label47.Location = new System.Drawing.Point(5, 397);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(562, 32);
-            this.label47.TabIndex = 16;
-            this.label47.Text = "Description";
-            this.label47.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label49.AutoSize = true;
+            this.label49.BackColor = System.Drawing.Color.Transparent;
+            this.label49.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label49.Location = new System.Drawing.Point(8, 139);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(56, 13);
+            this.label49.TabIndex = 15;
+            this.label49.Text = "Defending";
             // 
             // label48
             // 
@@ -1144,16 +1197,70 @@ namespace Nexomon_Extinction_Database
             this.label48.TabIndex = 14;
             this.label48.Text = "Attacking";
             // 
-            // label49
+            // pictureBox3
             // 
-            this.label49.AutoSize = true;
-            this.label49.BackColor = System.Drawing.Color.Transparent;
-            this.label49.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label49.Location = new System.Drawing.Point(8, 139);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(56, 13);
-            this.label49.TabIndex = 15;
-            this.label49.Text = "Defending";
+            this.pictureBox3.Image = global::Nexomon_Extinction_Database.Properties.Resources.typechart;
+            this.pictureBox3.Location = new System.Drawing.Point(8, 50);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(556, 388);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label50
+            // 
+            this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label50.Location = new System.Drawing.Point(460, 238);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(40, 20);
+            this.label50.TabIndex = 20;
+            this.label50.Text = "HP:";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label51
+            // 
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label51.Location = new System.Drawing.Point(460, 258);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(40, 20);
+            this.label51.TabIndex = 21;
+            this.label51.Text = "STA:";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label52
+            // 
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label52.Location = new System.Drawing.Point(460, 278);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(40, 20);
+            this.label52.TabIndex = 22;
+            this.label52.Text = "ATK:";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label53
+            // 
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label53.Location = new System.Drawing.Point(460, 298);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(40, 20);
+            this.label53.TabIndex = 23;
+            this.label53.Text = "DEF:";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label54
+            // 
+            this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label54.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label54.Location = new System.Drawing.Point(460, 318);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(40, 20);
+            this.label54.TabIndex = 24;
+            this.label54.Text = "SPD:";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Form1
             // 
@@ -1173,15 +1280,18 @@ namespace Nexomon_Extinction_Database
             this.Shown += new System.EventHandler(this.Form1_Shown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.food2Image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.food3Image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.food1Image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.monsterImage1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.elementImage)).EndInit();
             this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1190,13 +1300,13 @@ namespace Nexomon_Extinction_Database
 
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox monsterImage1;
         private System.Windows.Forms.Label hpText;
         private System.Windows.Forms.Label staminaText;
         private System.Windows.Forms.Label attackText;
         private System.Windows.Forms.Label defenseText;
         private System.Windows.Forms.Label speedText;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox elementImage;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ListView listView1;
@@ -1259,6 +1369,14 @@ namespace Nexomon_Extinction_Database
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.PictureBox food2Image;
+        private System.Windows.Forms.PictureBox food3Image;
+        private System.Windows.Forms.PictureBox food1Image;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label50;
     }
 }
 

@@ -33,6 +33,7 @@ namespace Nexomon_Extinction_Database
 
             /* Add the nexomon names to the list
              * Evolutions do not have a skill tree, so check previous index for skill tree
+             * Evolutions also do not have preferred foods, so same thing
             */
             foreach (string mon in nexomonList.Keys)
             {
@@ -42,6 +43,12 @@ namespace Nexomon_Extinction_Database
                 {
                     int monIndex = nexomonList.Keys.ToList().FindIndex(x => x == mon);
                     nexomonList[mon].skill_tree = nexomonList[nexomonList.Keys.ToList()[monIndex - 1]].skill_tree;
+                }
+
+                if (nexomonList[mon].foods.Count() == 0 && nexomonList[mon].rarity < 6)
+                {
+                    int monIndex = nexomonList.Keys.ToList().FindIndex(x => x == mon);
+                    nexomonList[mon].foods = nexomonList[nexomonList.Keys.ToList()[monIndex - 1]].foods;
                 }
             }
 
@@ -85,20 +92,35 @@ namespace Nexomon_Extinction_Database
             string monName = ConvertToLower(listBox1.SelectedItem.ToString());
             currentMon = nexomonList[monName];
 
-            // set monster and element images
+            // set monster, element, and food images
             //
             Bitmap bmpMon = (Bitmap)Properties.Resources.ResourceManager.GetObject(monName);
-            pictureBox1.Image = bmpMon;
+            monsterImage1.Image = bmpMon;
             Bitmap bmpType = (Bitmap)Properties.Resources.ResourceManager.GetObject(currentMon.element);
-            pictureBox2.Image = bmpType;
+            elementImage.Image = bmpType;
+            if (currentMon.foods.Count() > 0)
+            {
+                Bitmap bmpFood1 = (Bitmap)Properties.Resources.ResourceManager.GetObject(currentMon.foods[0]);
+                food1Image.Image = bmpFood1;
+                Bitmap bmpFood2 = (Bitmap)Properties.Resources.ResourceManager.GetObject(currentMon.foods[1]);
+                food2Image.Image = bmpFood2;
+                Bitmap bmpFood3 = (Bitmap)Properties.Resources.ResourceManager.GetObject(currentMon.foods[2]);
+                food3Image.Image = bmpFood3;
+            }
+            else
+            {
+                food1Image.Image = null;
+                food2Image.Image = null;
+                food3Image.Image = null;
+            }
 
             // set monster info texts
             //
-            hpText.Text = $"HP:   {currentMon.hp}";
-            staminaText.Text = $"STA: {currentMon.sta}";
-            attackText.Text = $"ATK: {currentMon.atk}";
-            defenseText.Text = $"DEF: {currentMon.def}";
-            speedText.Text = $"SPD: {currentMon.spd}";
+            hpText.Text = $"{currentMon.hp}";
+            staminaText.Text = $"{currentMon.sta}";
+            attackText.Text = $"{currentMon.atk}";
+            defenseText.Text = $"{currentMon.def}";
+            speedText.Text = $"{currentMon.spd}";
             descText.Text = currentMon.description;
 
             // clear old monster's skills and add the new monster's skills

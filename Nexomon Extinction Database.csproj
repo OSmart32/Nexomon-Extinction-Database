@@ -1266,5 +1266,98 @@
   <ItemGroup>
     <None Include="Resources\noki.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-perfect.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
